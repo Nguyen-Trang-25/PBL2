@@ -1,25 +1,36 @@
 #ifndef USER_H
 #define USER_H
-#include <string>
+
+#include <ctime>
+#include "date.h"
 using namespace std;
 
-class user
-{
-private:
-    int name;
-    string id;
-public:
-    user(/* args */);
-    ~user();
+enum Sex{
+    male,
+    female,
+    unisex
 };
 
-user::user(/* args */)
-{
-}
+class UserNode{
+    string idUser;
+    string name;
+    string email;
+    string phoneNum;
+    Sex sex;
+    Date birth;
+    Date createDate;
+    UserNode *next;
+};
 
-user::~user()
-{
-}
-
-
+class User{
+    protected:
+        UserNode *head;
+    public:
+        void logIn();
+        void logOut();
+        void displayInfo();
+        void updateUser(); 
+        void updateStatus();
+};
 #endif
+
