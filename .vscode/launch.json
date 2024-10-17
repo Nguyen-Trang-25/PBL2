@@ -1,0 +1,27 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "C++ Launch",                    // Tên cấu hình
+            "type": "cppdbg",                        // Loại debugger
+            "request": "launch",                     // Loại yêu cầu (launch để chạy)
+            "program": "${workspaceFolder}/bin/output", // Đường dẫn tới file thực thi
+            "args": [],                              // Tham số đầu vào (nếu có)
+            "stopAtEntry": false,                    // Dừng tại entry point không?
+            "cwd": "${workspaceFolder}",             // Thư mục làm việc hiện tại
+            "environment": [],                        // Biến môi trường (nếu có)
+            "externalConsole": true,                // Sử dụng console bên ngoài không?
+            "MIMode": "gdb",                         // Sử dụng GDB để gỡ lỗi
+            "miDebuggerPath": "gdb",                 // Đường dẫn tới GDB (có thể cần điều chỉnh)
+            "miDebuggerArgs": "",                     // Tham số cho GDB (nếu có)
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "build"                 // Task để chạy trước khi launch
+        }
+    ]
+}

@@ -12,9 +12,9 @@ class Date{
         int minute;
         int second;
     public:
-        Date(int, int, int, int = 0, int = 0, int = 0);
         Date();
-        void setDate(int, int, int);
+        Date(int, int, int, int = 0, int = 0, int = 0);
+        void setDate( int, int, int);
         void showDate();
 };
 
