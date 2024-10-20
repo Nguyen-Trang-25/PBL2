@@ -14,8 +14,12 @@ class Date{
     public:
         Date();
         Date(int, int, int, int = 0, int = 0, int = 0);
-        void setDate( int, int, int);
+        void setDate( int d, int m, int y);
+        void setTime(int h, int mn, int s);
+        void setDayTime(int d, int m, int y, int h, int mn, int s);
         void showDate();
+        void showTime();
+        void showDateTime();
 };
 
 #endif
