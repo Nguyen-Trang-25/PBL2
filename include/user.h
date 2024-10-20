@@ -22,14 +22,18 @@ class UserNode{
         Date createDate;
         UserNode *next;
     public:
-         UserNode(string id, string n, string e, string phone, Sex s, Date b, Date cDate);
+        UserNode(string id, string n, string e, string phone, Sex s, Date b, Date cDate)
+        : idUser(id), name(n), email(e), phoneNum(phone), sex(s), birth(b), createDate(cDate), next(nullptr) {}
+        friend class userList;
 };
 
-class User{
+class userList{
     protected:
         UserNode *head;
     public:
-        User();
+        userList();
+        userList(const userList &user); 
+        ~userList();
         void logIn();
         void logOut();
         void displayInfo();
